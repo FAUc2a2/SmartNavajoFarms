@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./output.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    </head>
+    <body class=" absolute bg-white flex w-full h-full">
+        <nav class="pl-10 pr-10 bg-gray-100 text-gray-700">
+            <div class="mt-10 mb-10 justify-center text-3xl font-bold rounded-md flex text-lime-600">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-10 mr-3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a3.75 3.75 0 0 0 1.332-7.257 3 3 0 0 0-3.758-3.848 5.25 5.25 0 0 0-10.233 2.33A4.502 4.502 0 0 0 2.25 15Z" />
+                </svg>
+                Navajo Smart Farms
+            </div>
+            <a href="index.html"><button class="text-left pl-5 w-full rounded-r-md border-l-2 text-sm bg-gray-100 p-3 mb-3  transition duration-300 hover:bg-white hover:text-lime-500 hover:translate-x-3">Dashboard</button></a>
+            <a href="#"><button class="text-left pl-5 w-full rounded-r-md border-l-2 text-sm border-lime-600 bg-gray-100 p-3 mb-3  transition duration-300 hover:bg-white hover:text-lime-500 hover:translate-x-3">Field Management</button></a>
+        </nav>
+        <div class="grow" id="map">
+        </div>  
+        <script>
+            var map = L.map('map').setView([0,0],2);
+            L.tileLayer('https://api.maptiler.com/maps/dataviz/{z}/{x}/{y}.png?key=6F7QA1BMMg4pBqdQo1mA', {attribution:' <a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'}).addTo(map);
+        </script>
+    </body>
+</html>
